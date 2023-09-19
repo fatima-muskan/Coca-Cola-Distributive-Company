@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0ED9DDDA-A62B-4D07-8A33-2CA3DEDC874A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FinalProject</RootNamespace>
+    <AssemblyName>FinalProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CsvHelper, Version=30.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>packages\CsvHelper.30.0.1\lib\net47\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.HashCode.1.0.0\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.0\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\Drink.cs" />
+    <Compile Include="BL\EmployeeBL.cs" />
+    <Compile Include="BL\Orders.cs" />
+    <Compile Include="BL\RiderBL.cs" />
+    <Compile Include="BL\ShopkeeperBL.cs" />
+    <Compile Include="BL\Stock.cs" />
+    <Compile Include="BL\SupplierBL.cs" />
+    <Compile Include="BL\VehcleBL.cs" />
+    <Compile Include="DL\DrinkDL.cs" />
+    <Compile Include="DL\EmployeeDL.cs" />
+    <Compile Include="DL\EmployeeNode.cs" />
+    <Compile Include="DL\LoginDL.cs" />
+    <Compile Include="DL\OrderDL.cs" />
+    <Compile Include="DL\RiderDL.cs" />
+    <Compile Include="DL\RiderNode.cs" />
+    <Compile Include="DL\ShopkeeperDL.cs" />
+    <Compile Include="DL\ShopkeeperNode.cs" />
+    <Compile Include="DL\StockDL.cs" />
+    <Compile Include="DL\SupplierDL.cs" />
+    <Compile Include="DL\SupplierNode.cs" />
+    <Compile Include="DL\VehicleDL.cs" />
+    <Compile Include="DL\VehicleNode.cs" />
+    <Compile Include="form_AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_AddEmployee.Designer.cs">
+      <DependentUpon>form_AddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_addItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_addItem.Designer.cs">
+      <DependentUpon>form_addItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_addRider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_addRider.designer.cs">
+      <DependentUpon>form_addRider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_addShopkeeper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_addShopkeeper.designer.cs">
+      <DependentUpon>form_addShopkeeper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_addSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_addSupplier.designer.cs">
+      <DependentUpon>form_addSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_addVahicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_addVahicle.designer.cs">
+      <DependentUpon>form_addVahicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_collectOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_collectOrder.Designer.cs">
+      <DependentUpon>form_collectOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_extractItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_extractItem.Designer.cs">
+      <DependentUpon>form_extractItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_generalManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_generalManager.designer.cs">
+      <DependentUpon>form_generalManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_generateReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_generateReport.Designer.cs">
+      <DependentUpon>form_generateReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_inventoryManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_inventoryManager.designer.cs">
+      <DependentUpon>form_inventoryManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_manager.designer.cs">
+      <DependentUpon>form_manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_placeOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_placeOrder.Designer.cs">
+      <DependentUpon>form_placeOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_rider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_rider.Designer.cs">
+      <DependentUpon>form_rider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_salesManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_salesManager.designer.cs">
+      <DependentUpon>form_salesManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_searchEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_searchEmployee.Designer.cs">
+      <DependentUpon>form_searchEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_searchRider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_searchRider.designer.cs">
+      <DependentUpon>form_searchRider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_searchShopkeeper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_searchShopkeeper.designer.cs">
+      <DependentUpon>form_searchShopkeeper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_searchVahicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_searchVahicle.designer.cs">
+      <DependentUpon>form_searchVahicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_updateItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_updateItem.Designer.cs">
+      <DependentUpon>form_updateItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_updateShopkeeper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_updateShopkeeper.designer.cs">
+      <DependentUpon>form_updateShopkeeper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_updateSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_updateSupplier.Designer.cs">
+      <DependentUpon>form_updateSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_updateVahicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_updateVahicle.Designer.cs">
+      <DependentUpon>form_updateVahicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_updEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_updEmployee.Designer.cs">
+      <DependentUpon>form_updEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_updRider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_updRider.designer.cs">
+      <DependentUpon>form_updRider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_viewEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_viewEmployee.Designer.cs">
+      <DependentUpon>form_viewEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_viewRider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_viewRider.designer.cs">
+      <DependentUpon>form_viewRider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_viewShopkeeeper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_viewShopkeeeper.designer.cs">
+      <DependentUpon>form_viewShopkeeeper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_viewStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_viewStock.Designer.cs">
+      <DependentUpon>form_viewStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_viewSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_viewSupplier.Designer.cs">
+      <DependentUpon>form_viewSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_viewVahicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_viewVahicle.designer.cs">
+      <DependentUpon>form_viewVahicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginForm.Designer.cs">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="form_searchSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_searchSupplier.Designer.cs">
+      <DependentUpon>form_searchSupplier.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="form_AddEmployee.resx">
+      <DependentUpon>form_AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_addItem.resx">
+      <DependentUpon>form_addItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_addRider.resx">
+      <DependentUpon>form_addRider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_addShopkeeper.resx">
+      <DependentUpon>form_addShopkeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_addSupplier.resx">
+      <DependentUpon>form_addSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_addVahicle.resx">
+      <DependentUpon>form_addVahicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_collectOrder.resx">
+      <DependentUpon>form_collectOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_extractItem.resx">
+      <DependentUpon>form_extractItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_generalManager.resx">
+      <DependentUpon>form_generalManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_generateReport.resx">
+      <DependentUpon>form_generateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_inventoryManager.resx">
+      <DependentUpon>form_inventoryManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_manager.resx">
+      <DependentUpon>form_manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_placeOrder.resx">
+      <DependentUpon>form_placeOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_rider.resx">
+      <DependentUpon>form_rider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_salesManager.resx">
+      <DependentUpon>form_salesManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_searchEmployee.resx">
+      <DependentUpon>form_searchEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_searchRider.resx">
+      <DependentUpon>form_searchRider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_searchShopkeeper.resx">
+      <DependentUpon>form_searchShopkeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_searchSupplier.resx">
+      <DependentUpon>form_searchSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_searchVahicle.resx">
+      <DependentUpon>form_searchVahicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_updateItem.resx">
+      <DependentUpon>form_updateItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_updateShopkeeper.resx">
+      <DependentUpon>form_updateShopkeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_updateSupplier.resx">
+      <DependentUpon>form_updateSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_updateVahicle.resx">
+      <DependentUpon>form_updateVahicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_updEmployee.resx">
+      <DependentUpon>form_updEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_updRider.resx">
+      <DependentUpon>form_updRider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_viewEmployee.resx">
+      <DependentUpon>form_viewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_viewRider.resx">
+      <DependentUpon>form_viewRider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_viewShopkeeeper.resx">
+      <DependentUpon>form_viewShopkeeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_viewStock.resx">
+      <DependentUpon>form_viewStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_viewSupplier.resx">
+      <DependentUpon>form_viewSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_viewVahicle.resx">
+      <DependentUpon>form_viewVahicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginForm.resx">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
